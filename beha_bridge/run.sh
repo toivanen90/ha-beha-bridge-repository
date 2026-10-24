@@ -29,8 +29,5 @@ if [ ! -f /data/beha_tokens.json ] || [ ! -s /data/beha_tokens.json ]; then
     python3 /beha_auth.py login-headless "$BEHA_EMAIL" "$BEHA_PASS"
 fi
 
-bashio::log.info "Running safe BEHA API structure diagnostic..."
-python3 /beha_diag.py || bashio::log.warning "BEHA API diagnostic failed; continuing with bridge startup"
-
 bashio::log.info "Starting MQTT Bridge..."
 exec python3 /beha_mqtt.py --host "$MQTT_HOST" --port "$MQTT_PORT" --user "$MQTT_USER" --passw "$MQTT_PASS"
