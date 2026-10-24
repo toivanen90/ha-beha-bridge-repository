@@ -8,6 +8,7 @@ RUN apk add --no-cache python3 py3-pip curl && \
     curl -fsSL "https://raw.githubusercontent.com/maxd2s/ha-beha-bridge/${UPSTREAM_COMMIT}/beha_auth.py" -o /beha_auth.py && \
     curl -fsSL "https://raw.githubusercontent.com/maxd2s/ha-beha-bridge/${UPSTREAM_COMMIT}/beha_mqtt.py" -o /beha_mqtt.py
 
+COPY beha_diag.py /beha_diag.py
 COPY run.sh /
 RUN chmod a+x /run.sh
 
