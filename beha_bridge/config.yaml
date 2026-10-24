@@ -1,8 +1,8 @@
 name: "BEHA SmartHeater Bridge"
-version: "1.0.0"
+version: "1.0.1"
 slug: "beha_bridge"
 description: "Control BEHA SmartHeater heaters via Home Assistant MQTT discovery"
-url: "https://github.com/maxd2s/ha-beha-bridge"
+url: "https://github.com/toivanen90/ha-beha-bridge-repository"
 init: false
 arch:
   - aarch64
